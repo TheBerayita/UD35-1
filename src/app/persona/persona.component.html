@@ -1,0 +1,25 @@
+<h1>Formulario de contacto</h1>
+<form  #formulario="ngForm" >
+<p>
+  <span><b>Nombre: </b></span>
+  <input type="text" name="nombre" placeholder="Nombre y Apellido" ><!--[(ngModel)]="formulario.nombre"-->
+<p>
+  <span><b>Email: </b></span>
+  <input type="email" name="email" placeholder="ejemlo@dominio.com" ><!-- [(ngModel)]="formulario.email"-->
+</p>
+<p>
+  <span><b>Mensaje: </b></span>
+
+</p>
+<textarea type="text" name="mensaje"rows="4" cols="26"></textarea><!--[(ngModel)]="formulario.mensaje"-->
+<p>
+  <span><b>2 + 3 = </b></span>
+  <input type="number" name="suma" placeholder="0"><!--[(ngModel)]="formulario.suma"-->
+</p>
+<p>
+  <button type="submit" (click)="comprovar()">Guardar</button>
+</p>
+</form>
+
+<p><b>Datos:</b></p>
+{{ persona | json }}
